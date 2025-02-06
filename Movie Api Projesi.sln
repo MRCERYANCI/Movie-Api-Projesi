@@ -1,0 +1,45 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.13.35507.96
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Core", "Core", "{F1EABC6C-FC1C-4A43-AD6F-E8219A3B236B}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Frontends", "Frontends", "{A538993A-BD2A-456A-B84E-2BDDB78F74B2}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infrastructure", "Infrastructure", "{3019E79F-F30B-45D9-999C-CAADF3AC4FF4}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Presentation", "Presentation", "{E631C058-D635-4A0B-99BC-CF612AAEC9EB}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Requirements", "Requirements", "{D9EAB588-6F37-4FE6-B210-EBA0AD3415CB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MovieApi.Domain", "Core\MovieApi.Domain\MovieApi.Domain.csproj", "{B5A0BE9A-2F1C-4CEE-9717-85489D8CAB85}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MoviewApi.Persistence", "Infrastructure\MoviewApi.Persistence\MoviewApi.Persistence.csproj", "{F37A7BFE-042A-4244-B205-00161333AFAA}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B5A0BE9A-2F1C-4CEE-9717-85489D8CAB85}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B5A0BE9A-2F1C-4CEE-9717-85489D8CAB85}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B5A0BE9A-2F1C-4CEE-9717-85489D8CAB85}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B5A0BE9A-2F1C-4CEE-9717-85489D8CAB85}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F37A7BFE-042A-4244-B205-00161333AFAA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F37A7BFE-042A-4244-B205-00161333AFAA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F37A7BFE-042A-4244-B205-00161333AFAA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F37A7BFE-042A-4244-B205-00161333AFAA}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{B5A0BE9A-2F1C-4CEE-9717-85489D8CAB85} = {F1EABC6C-FC1C-4A43-AD6F-E8219A3B236B}
+		{F37A7BFE-042A-4244-B205-00161333AFAA} = {3019E79F-F30B-45D9-999C-CAADF3AC4FF4}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {10443C2A-3F47-4714-A7B4-34E3D4053E34}
+	EndGlobalSection
+EndGlobal
