@@ -8,11 +8,11 @@ using System.Threading.Tasks;
 
 namespace MovieApi.Application.Features.CQRSDesignPattern.Handlers.CategoryHandlers
 {
-    public class UpdateCategoryCommandHandle
+    public class UpdateCategoryCommandHandler
     {
         private readonly MovieContext _movieContext;
 
-        public UpdateCategoryCommandHandle(MovieContext movieContext)
+        public UpdateCategoryCommandHandler(MovieContext movieContext)
         {
             _movieContext = movieContext;
         }
@@ -24,6 +24,8 @@ namespace MovieApi.Application.Features.CQRSDesignPattern.Handlers.CategoryHandl
             if(category is not null)
             {
                 category.CategoryName = updateCategoryCommand.CategoryName;
+
+                _movieContext.Categories.Update(category);
                 await _movieContext.SaveChangesAsync();
             }
         }

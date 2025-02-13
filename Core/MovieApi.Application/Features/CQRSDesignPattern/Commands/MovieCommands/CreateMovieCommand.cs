@@ -15,6 +15,7 @@ namespace MovieApi.Application.Features.CQRSDesignPattern.Commands.MovieCommands
         public int Duration { get; set; }  //Film Süresi
         public DateTime ReleaseDate { get; set; }  //Film Çıkış Tarihi
         public string CreatedYear { get; set; }
+        public int CategoryId { get; set; }
         public bool Status { get; set; }
     }
 }
