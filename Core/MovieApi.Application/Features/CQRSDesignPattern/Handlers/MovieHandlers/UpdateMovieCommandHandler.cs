@@ -21,7 +21,7 @@ namespace MovieApi.Application.Features.CQRSDesignPattern.Handlers.MovieHandlers
         {
             var movie = await _movieContext.Movies.FindAsync(updateMovieCommand.MovieId);
 
-            if(movie is not null)
+            if (movie is not null)
             {
                 movie.Status = updateMovieCommand.Status;
                 movie.Title = updateMovieCommand.Title;
@@ -33,8 +33,9 @@ namespace MovieApi.Application.Features.CQRSDesignPattern.Handlers.MovieHandlers
                 movie.CategoryId = updateMovieCommand.CategoryId;
                 movie.ReleaseDate = updateMovieCommand.ReleaseDate;
 
-                _movieContext.Movies.Update(movie)
+                _movieContext.Movies.Update(movie);
                 await _movieContext.SaveChangesAsync();
+            }
         }
     }
 }
