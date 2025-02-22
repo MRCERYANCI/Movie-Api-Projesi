@@ -20,11 +20,11 @@ namespace MovieApi.Application.Features.CQRSDesignPattern.Handlers.CategoryHandl
 
         public async Task Handle(RemoveCategoryCommand removeCategoryCommand, CancellationToken cancellationToken)
         {
-            Category ?categorie = await _movieContext.Categories.FindAsync(new object[] { removeCategoryCommand.CategoryId }, cancellationToken);
+            Category ?category = await _movieContext.Categories.FindAsync(new object[] { removeCategoryCommand.CategoryId }, cancellationToken);
 
-            if(categorie is not null)
+            if(category is not null)
             {
-                _movieContext.Categories.Remove(categorie);
+                _movieContext.Categories.Remove(category);
                 await _movieContext.SaveChangesAsync(cancellationToken);
             }
         }
