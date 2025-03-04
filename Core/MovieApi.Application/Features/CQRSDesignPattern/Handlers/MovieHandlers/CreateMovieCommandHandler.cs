@@ -29,7 +29,8 @@ namespace MovieApi.Application.Features.CQRSDesignPattern.Handlers.MovieHandlers
                 CreatedYear = createMovieCommand.CreatedYear,
                 Rating = createMovieCommand.Rating,
                 Status = createMovieCommand.Status,
-                Title = createMovieCommand.Title
+                Title = createMovieCommand.Title,
+                CategoryId = createMovieCommand.CategoryId,
             });
 
             await _movieContext.SaveChangesAsync();
