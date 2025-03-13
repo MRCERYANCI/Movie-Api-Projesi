@@ -22,7 +22,7 @@ namespace MovieApi.Application.Features.MediatorDesingPattern.Handlers.CastHandl
 
         public async Task<List<GetCastQueryResult>> Handle(GetCastQuery request, CancellationToken cancellationToken)
         {
-            var values = await _movieContext.Casts.ToListAsync();
+            var values = await _movieContext.Casts.AsNoTracking().ToListAsync();
             return values.Select(x => new GetCastQueryResult
             {
                 CastId = x.CastId,
