@@ -20,7 +20,7 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen(x =>
 {
-    x.SwaggerDoc("v1", new OpenApiInfo { Title = "Çokkeçeci Movie Web Api", Version = "v1.0.0" });
+    x.SwaggerDoc("v1", new OpenApiInfo { Title = "Çokkeçeci Movie Web Api", Version = "v1.0.1" });
 });
 
 var app = builder.Build();
