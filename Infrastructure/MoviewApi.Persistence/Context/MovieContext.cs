@@ -20,5 +20,6 @@ namespace MoviewApi.Persistence.Context
         public DbSet<Category> Categories { get; set; }
         public DbSet<Movie> Movies { get; set; }
         public DbSet<Review> Reviews { get; set; }
+        public DbSet<Tag> Tags { get; set; }
     }
 }
