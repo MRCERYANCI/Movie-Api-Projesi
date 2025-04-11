@@ -22,7 +22,7 @@ namespace MovieApi.Application.Features.MediatorDesingPattern.Handlers.CastHandl
 
         public async Task Handle(RemoveCastCommand request, CancellationToken cancellationToken)
         {
-            Cast ?cast = await _movieContext.Casts.FindAsync((new object[] { request.CastId }, cancellationToken));
+            Cast ?cast = await _movieContext.Casts.FindAsync(request.CastId);
             if(cast is not null)
             {
                 _movieContext.Casts.Remove(cast);
