@@ -29,5 +29,12 @@ namespace MovieApi.WebUI.Controllers
 
             return View();
         }
+
+        public async Task<IActionResult> MovieDetail(int id)
+        {
+            TempData["v1"] = "Film Listesi";
+            TempData["v2"] = "Film Detayları";
+            return View();
+        }
     }
 }
