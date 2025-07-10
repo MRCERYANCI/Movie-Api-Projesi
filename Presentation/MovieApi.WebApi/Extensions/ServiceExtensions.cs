@@ -1,8 +1,11 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.AspNetCore.Identity;
+using Microsoft.EntityFrameworkCore;
 using MovieApi.Application.Features.CQRSDesignPattern.Handlers.CategoryHandlers;
 using MovieApi.Application.Features.CQRSDesignPattern.Handlers.MovieHandlers;
+using MovieApi.Application.Features.CQRSDesignPattern.Handlers.UserRegisterHandlers;
 using MovieApi.Application.Features.MediatorDesingPattern.Handlers.TagHandlers;
 using MoviewApi.Persistence.Context;
+using MoviewApi.Persistence.Identity;
 using System.Reflection;
 
 namespace MovieApi.WebApi.Extensions
@@ -22,6 +25,10 @@ namespace MovieApi.WebApi.Extensions
             services.AddScoped<RemoveMovieCommandHandler>();
             services.AddScoped<GetMovieQueryHandler>();
             services.AddScoped<GetMovieByIdQueryHandler>();
+
+            services.AddScoped<CreateUserRegisterCommandHandler>();
+
+            services.AddIdentity<AppUser, IdentityRole>().AddEntityFrameworkStores<MovieContext>().AddDefaultTokenProviders();
 
             //services.AddMediatR(cfg=>cfg.RegisterServicesFromAssembly(Assembly.GetExecutingAssembly())); 9.0 ve altı için geçerli
             services.AddMediatR(cfg => cfg.RegisterServicesFromAssembly(typeof(GetTagQueryHandler).Assembly));
